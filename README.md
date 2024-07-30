@@ -1,6 +1,4 @@
-Certainly! Here's the `README.md` content ready for direct copy-pasting:
 
-```markdown
 # Flask-2FA-App
 
 A Flask web application demonstrating user authentication with JWT and two-factor authentication (2FA) using OTP.
@@ -39,7 +37,7 @@ A Flask web application demonstrating user authentication with JWT and two-facto
 
    ```bash
    flask run
-   ```
+   
 
 ## Usage
 
