@@ -75,7 +75,6 @@ my_flask_app/
 │       ├── register.html
 │       ├── login.html
 │       ├── otp.html
-│       ├── two_factor_setup.html
 ├── tests/
 │   ├── test_registration.py
 │   ├── test_login.py
