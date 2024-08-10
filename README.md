@@ -69,20 +69,19 @@ my_flask_app/
 ├── app/
 │   ├── __init__.py
 │   ├── routes.py
-│   ├── models.py
 │   ├── forms.py
 │   └── templates/
 │       ├── register.html
 │       ├── login.html
 │       ├── otp.html
+│       ├── dashboard.html
+│       ├── welcome.html
 ├── tests/
 │   ├── test_registration.py
 │   ├── test_login.py
 │   └── test_otp.py
 ├── venv/
-├── config.py
 ├── requirements.txt
-├── Procfile
 └── README.md
 ```
 
