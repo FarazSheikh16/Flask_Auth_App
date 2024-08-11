@@ -138,5 +138,7 @@ def dashboard():
 @app.route('/logout')
 def logout():
     session.clear()
+    response = make_response(redirect(url_for('login')))
+    response.delete_cookie('jwt_token')
     flash('You have been logged out successfully.', 'success')
-    return redirect(url_for('login'))
+    return response
