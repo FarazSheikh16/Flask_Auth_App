@@ -4,8 +4,13 @@ from app import app
 
 @app.route('/')
 def welcome():
-    return render_template('welcome.html')
-
+    jwt_token = request.cookies.get('jwt_token')
+    if jwt_token:
+        # If the JWT token is present, redirect to the dashboard
+        return redirect(url_for('dashboard'))
+    else:
+        # Otherwise, show the welcome page
+        return render_template('welcome.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -99,13 +104,14 @@ def otp():
             if response.status_code == 201:
                 # Check if the response contains the accessToken
                 response_json = response.json()
-                access_token = response_json.get('accessToken')  
+                jwt_token = response_json.get('accessToken')  
                 
-                if access_token:
-                    # Store access token in the session (or use secure cookies)
-                    session['jwt_token'] = access_token
+                 if jwt_token:
+                    # Store JWT in a secure HttpOnly cookie
+                    response = make_response(redirect(url_for('dashboard')))
+                    response.set_cookie('jwt_token', jwt_token, httponly=True, secure=True)
                     flash('OTP verification successful! You are now logged in.', 'success')
-                    return redirect(url_for('dashboard'))
+                    return response
                 else:
                     flash('Access token not received.', 'error')
             else:
