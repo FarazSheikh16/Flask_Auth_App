@@ -127,7 +127,8 @@ def otp():
 
 @app.route('/dashboard')
 def dashboard():
-    jwt_token = session['jwt_token']
+    # jwt_token = session['jwt_token']
+    jwt_token = request.cookies.get('jwt_token')
     if not jwt_token:
         flash('You are not authorized to access this page. Please log in.', 'error')
         return redirect(url_for('login'))
