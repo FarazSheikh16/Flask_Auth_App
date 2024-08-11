@@ -2,7 +2,7 @@ from flask import render_template, request, flash, redirect, url_for, jsonify, s
 import requests
 from app import app
 
-app.permanent_session_lifetime = timedelta(minutes=2)  # Set session timeout to 2 minutes
+# app.permanent_session_lifetime = timedelta(minutes=2)  # Set session timeout to 2 minutes
 
 @app.after_request
 def add_security_headers(response):
