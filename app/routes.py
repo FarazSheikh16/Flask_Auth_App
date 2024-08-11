@@ -2,7 +2,7 @@ from flask import render_template, request, flash, redirect, url_for, jsonify, s
 import requests
 from app import app
 
-@app.route('/welcome')
+@app.route('/')
 def welcome():
     return render_template('welcome.html')
 
