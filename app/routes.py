@@ -7,7 +7,7 @@ from app import app
 @app.after_request
 def add_security_headers(response):
     response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
-    response.headers['Cache-Control'] = 'post-check=0, pre-check=0'
+    # response.headers['Cache-Control'] = 'post-check=0, pre-check=0'
     response.headers['Pragma'] = 'no-cache'
     return response
 
