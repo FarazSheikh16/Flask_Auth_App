@@ -106,7 +106,7 @@ def otp():
                 response_json = response.json()
                 jwt_token = response_json.get('accessToken')  
                 
-                 if jwt_token:
+                if jwt_token:
                     # Store JWT in a secure HttpOnly cookie
                     response = make_response(redirect(url_for('dashboard')))
                     response.set_cookie('jwt_token', jwt_token, httponly=True, secure=True)
