@@ -1,4 +1,4 @@
-from flask import render_template, request, flash, redirect, url_for, jsonify, session
+from flask import render_template, request, flash, redirect, url_for, jsonify, session, make_response
 import requests
 from app import app
 
