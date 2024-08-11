@@ -4,6 +4,10 @@ from app import app
 
 # app.permanent_session_lifetime = timedelta(minutes=2)  # Set session timeout to 2 minutes
 
+def is_authenticated():
+    jwt_token = request.cookies.get('jwt_token')
+    return jwt_token is not None
+
 @app.after_request
 def add_security_headers(response):
     response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
