@@ -3,6 +3,9 @@
 
 A Flask web application demonstrating user authentication with JWT and two-factor authentication (2FA) using OTP.
 
+## Demo Link
+You can check the demo by visiting the link below:
+   - https://flask-auth-app-iota.vercel.app/
 ## Features
 
 - User Registration
@@ -69,21 +72,21 @@ my_flask_app/
 ├── app/
 │   ├── __init__.py
 │   ├── routes.py
-│   ├── models.py
 │   ├── forms.py
 │   └── templates/
 │       ├── register.html
 │       ├── login.html
 │       ├── otp.html
-│       ├── two_factor_setup.html
+│       ├── dashboard.html
+│       ├── welcome.html
+│   └── static\css
+│       ├── styles.css
 ├── tests/
 │   ├── test_registration.py
 │   ├── test_login.py
 │   └── test_otp.py
 ├── venv/
-├── config.py
 ├── requirements.txt
-├── Procfile
 └── README.md
 ```
 
