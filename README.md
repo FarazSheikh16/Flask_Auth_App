@@ -81,10 +81,6 @@ my_flask_app/
 │       ├── welcome.html
 │   └── static\css
 │       ├── styles.css
-├── tests/
-│   ├── test_registration.py
-│   ├── test_login.py
-│   └── test_otp.py
 ├── venv/
 ├── requirements.txt
 └── README.md
